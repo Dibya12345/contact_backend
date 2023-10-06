@@ -6,14 +6,18 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/app.js"
+    "start": "nodemon ./src/app.js",
+    "build": "echo 'Running build tasks...' && npm run lint && npm run security-check",
+    "lint": "eslint .",
+    "security-check": "npm audit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "nodemon": "^2.0.22"
+    "eslint": "^8.50.0",
+    "nodemon": "^2.0.19"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
